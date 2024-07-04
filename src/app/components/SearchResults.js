@@ -11,20 +11,29 @@ const SearchResults = () => {
   const searchResults = useSelector((state) => state.search.results);
 
   return (
-    <Row gutter={16}>
+    <div>
       {searchResults.map((book) => (
-        <Col span={8} key={book.key}>
-          <Link href={`/book/${encodeURIComponent(book.key)}`} passHref>
-            <Card
-              hoverable
-              cover={<img alt={book.title} src={book.cover_url} />}
-            >
-              <Meta title={book.title} description={book.author_name} />
-            </Card>
-          </Link>
-        </Col>
+        <Row key={book.key} gutter={[16, 16]}>
+          <Col span={24}>
+            <Link href={`/search-results/book/${book.key.replace('/works/', '')}`} passHref>
+              <Card
+                className="cardSize"
+                hoverable
+                cover={
+                  <div className="cardCover">
+                    <img alt={book.title} src={book.cover_url} />
+                  </div>
+                }
+              >
+                <div className="cardContent">
+                  <Meta title={<h2>{book.title}</h2>} description={book.author_name} />
+                </div>
+              </Card>
+            </Link>
+          </Col>
+        </Row>
       ))}
-    </Row>
+    </div>
   );
 };
 
