@@ -6,8 +6,8 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255; /* White background */
+  --background-end-rgb: 255, 255, 255;   /* White background */
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -43,8 +43,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -111,8 +111,6 @@ a {
   }
 }
 
-
-
 .link {
   color: white;
   text-decoration: none;
@@ -148,10 +146,12 @@ a {
 
 .cardSize {
   width: 100%; /* Make the card take up the full width of the parent */
-  height: 200px;
+  height: 250px;
   display: flex;
   align-items: center; /* Center content vertically */
   margin-bottom: 16px; /* Add some space between cards */
+  padding-left: 15px;
+  padding-bottom: 35px;
 }
 
 .cardCover {
@@ -168,16 +168,23 @@ a {
 
 .cardContent {
   flex: 2;
-  padding-left: 16px; /* Add some spacing between the image and text */
+  padding-left: 16px; 
   align-content: start;
   vertical-align: top;
   align-items: start;
+  text-align: start;
 }
-
 
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
     height: auto;
   }
+}
+
+/* src/styles/global.css or src/components/SearchResults.module.css */
+
+.ant-modal-body img {
+  max-width: 100%;
+  height: auto;
 }

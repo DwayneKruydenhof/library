@@ -42,7 +42,6 @@ const NavBar = () => {
   const handleSearch = (value) => {
     dispatch(setQuery(value));
     fetchData(value);
-    
   };
 
   return (
