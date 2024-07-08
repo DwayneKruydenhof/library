@@ -1,7 +1,5 @@
-
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/navbar";
 import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from 'redux';
