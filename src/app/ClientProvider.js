@@ -4,7 +4,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from '/src/store';
-import NavBar from "./components/navbar"; 
+import NavBar from "./components/NavBar"; 
 
 export default function ClientProvider({ children }) {
   return (
