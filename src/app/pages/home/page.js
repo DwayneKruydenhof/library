@@ -3,13 +3,18 @@
 import React from 'react';
 import axios from 'axios';
 import { Button, Divider } from 'antd';
+import SearchBar from '../../components/SearchBar';
 
 export default function Page() {
 
   return (
     <div>
       <p>Home Page</p>
-      <Divider />
+      <div>
+        <SearchBar
+          size="large"
+        />
+      </div>
     </div>
   );
 }

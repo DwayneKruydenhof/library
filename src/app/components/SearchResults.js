@@ -11,7 +11,7 @@ const SearchResults = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20; // Set the number of items you want per page
+  const itemsPerPage = 20;
 
   const showModal = (book) => {
     setSelectedBook(book);
