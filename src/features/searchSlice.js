@@ -1,23 +1,26 @@
 // src/features/searchSlice.js
-import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  query: '',
-  results: [], // Add results to the initial state
-};
+import { createSlice } from '@reduxjs/toolkit';
 
 const searchSlice = createSlice({
   name: 'search',
-  initialState,
+  initialState: {
+    query: '',
+    results: [],
+    loading: false,
+  },
   reducers: {
     setQuery: (state, action) => {
       state.query = action.payload;
     },
-    setResults: (state, action) => { // Add a new action to set results
+    setResults: (state, action) => {
       state.results = action.payload;
+    },
+    setLoading: (state, action) => {
+      state.loading = action.payload;
     },
   },
 });
 
-export const { setQuery, setResults } = searchSlice.actions;
+export const { setQuery, setResults, setLoading } = searchSlice.actions;
 export default searchSlice.reducer;

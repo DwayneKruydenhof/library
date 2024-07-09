@@ -4,6 +4,7 @@
 import React from 'react';
 import SearchResults from '../../components/SearchResults';
 import { useRouter } from 'next/navigation';
+import SearchBar from '../../components/SearchBar';
 
 
 const SearchResultsPage = () => {
@@ -11,6 +12,10 @@ const SearchResultsPage = () => {
 
   return (
     <div>
+      <div className='searchBarResultPagePosition'>
+        <SearchBar/>
+        </div>
+      
       <h1>  Search Results </h1>
       <SearchResults />
     </div>
