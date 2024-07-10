@@ -1,26 +1,35 @@
-"use client";
-
 import React from 'react';
-import Image from 'next/image';
 
 const AboutPage = () => {
   return (
     <div className="about-container">
-      <h1>About Us</h1>
-      <div className="profile">
-        <div className="profile-text">
-          <h2>Application</h2>
-          <p>
-            The Magic Library application allows users to search for and view details about various books. It&apos;s built using modern web technologies including Next.js, React, and Ant Design.
-          </p>
-          <h2>Developer</h2>
-          <p>
-            This application was developed by a passionate Junior Front-End Developer who is eager to learn and improve. They&apos;re skilled in various technologies and have a keen interest in every facet of development and ICT.
-          </p>
-        </div>
+      <div className="about-content">
+        <h3>About Me</h3>
+        <p>
+          I&apos;m a junior software engineer with a deep passion for every facet of development and ICT. My journey in the tech world has been driven by curiosity and a relentless pursuit of knowledge.
+        </p>
+
+        <h3>About This Application</h3>
+        <p>
+          Welcome to my Books Search Application! This project uses the Open Library API to allow users to search for books based on titles or keywords. It&apos;s built using Next.js, incorporating the Ant Design component library for a polished user interface. The application features a Home Screen with a search bar for easy navigation, displaying search results in a table format with pagination. Users can explore detailed book information, including titles, authors, publication dates, descriptions, and cover images, on the Book Details Screen.
+        </p>
+
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>Next.js</li>
+          <li>React</li>
+          <li>Ant Design</li>
+          <li>Axios</li>
+          <li>Redux (optional)</li>
+        </ul>
+        
+        <h3>Deployment</h3>
+        <p>
+          This application is hosted on GitHub and deployed on Vercel.
+        </p>
       </div>
     </div>
   );
-};
+}
 
 export default AboutPage;
