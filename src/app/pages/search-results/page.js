@@ -1,22 +1,17 @@
-// src/pages/search-results.js
 "use client";
 
-import React from 'react';
-import SearchResults from '../../components/SearchResults';
-import { useRouter } from 'next/navigation';
-import SearchBar from '../../components/SearchBar';
+import React from 'react'; // Import React for JSX syntax
+import SearchResults from '../../components/SearchResults'; // Import SearchResults component
+import SearchBar from '../../components/SearchBar'; // Import SearchBar component
 
-
+// Functional component representing the Search Results page
 const SearchResultsPage = () => {
-  const router = useRouter();
 
   return (
     <div>
       <div className='searchBarResultPagePosition'>
         <SearchBar/>
-        </div>
-      
-      <h1>  Search Results </h1>
+      </div>
       <SearchResults />
     </div>
   );
