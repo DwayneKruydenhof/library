@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from './store'; // Import store correctly
+import { store } from '../store';
 import NavBar from "./components/NavBar";
 import Footer from './components/Footer'; // Import Footer correctly
 
