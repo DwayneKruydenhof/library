@@ -38,7 +38,7 @@ const SearchResults = () => {
   const currentItems = searchResults.slice(indexOfFirstItem, indexOfLastItem); // Slice search results based on pagination
 
   // Placeholder image component for books without cover image
-  const emptyImage = <Image alt='No image' src={noImage}/>;
+  const emptyImage = <Image alt='No image' src={noImage} width={100} height={150} />;
 
   return (
     <div className='results-container'>
@@ -65,7 +65,16 @@ const SearchResults = () => {
                 <Card
                   bordered={false}
                   hoverable
-                  cover={<div className='cardCover'><img alt={book.title} src={book.cover_url ? book.cover_url : emptyImage} /></div>}
+                  cover={
+                    <div className='cardCover'>
+                      <Image
+                        alt={book.title}
+                        src={book.cover_url ? book.cover_url : noImage}
+                        width={100}
+                        height={150}
+                      />
+                    </div>
+                  }
                   onClick={() => showModal(book)}
                   className="cardSize"
                 >
@@ -99,9 +108,11 @@ const SearchResults = () => {
               {/* Book details displayed in modal */}
               <Row gutter={[16, 16]}>
                 <Col xs={24} sm={24} md={10}>
-                  <img
+                  <Image
                     alt={selectedBook.title}
                     src={selectedBook.cover_url}
+                    width={100}
+                    height={150}
                     style={{ width: '100%', maxHeight: '400px', objectFit: 'contain' }}
                   />
                 </Col>
