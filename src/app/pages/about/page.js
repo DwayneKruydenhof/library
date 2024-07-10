@@ -2,14 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
-import profilePic from '../../../assets/profile-pic.jpg';
 
 const AboutPage = () => {
   return (
     <div className="about-container">
       <h1>About Us</h1>
       <div className="profile">
-        <Image src={profilePic} alt="Profile Picture" width={150} height={150} />
         <div className="profile-text">
           <h2>Application</h2>
           <p>
